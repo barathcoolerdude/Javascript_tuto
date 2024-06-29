@@ -1,9 +1,7 @@
-console.log("hello");
-console.log("i like you")
-
-window.alert('this is an alert!');
-window.alert("i like you too")
-
-//time to go
-
-
+let age=25;
+let price=10
+let gpa=3.5
+console.log(age);
+console.log("my age is ${age} years");
+console.log("prce of aplle is ${price} ");
+console.log("your gps is ${gpa}");
