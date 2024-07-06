@@ -1,4 +1,13 @@
 body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2em;
+    font-family: 'Courier New', Courier, monospace;
+    text-align:center;
+}
+#myButton{
+    font-size:3em;
+    padding:5px 25px;
+    border-radius: 5px;
+}
+
+.myLabels{
+    font-size:3em;
 }

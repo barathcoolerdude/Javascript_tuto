@@ -1,12 +1,18 @@
-/*let age=25;
-let price=10
-let gpa=3.5
-console.log(`my age is ${age} years`);
-console.log(`prce of aplle is ${price} `);*/
-//console.log(`your gps is ${gpa}`);
-let username;
+const myText=document.getElementById("myText");
+const mySubmit=document.getElementById("mySubmit");
+const resultElement=document.getElementById("resultElement");
+let age;
 
-document.getElementById("mysubmit").onclick=function(){
-    username=document.getElementById("mytext").value;
-    document.getElementById("myh1").textContent=`hello ${username}`;
+mySubmit.onclick=function(){
+    age=myText.value;
+    age=Number(age)
+    if(age>=100){
+        resultElement.textContent=`you are too old for this`;
+    }
+    else if(age<18){
+        resultElement.textContent=`go home child`;
+    }
+    else{
+        resultElement.textContent=`lets go`;
+    }
 }
