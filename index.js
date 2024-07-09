@@ -1,18 +1,29 @@
-const myText=document.getElementById("myText");
+const myCheckbox=document.getElementById("myCheckbox");
+const visaBtn=document.getElementById("visaBtn");
+const masterCardBtn=document.getElementById("masterCardBtn");
+const paypalBtn=document.getElementById("paypalBtn");
 const mySubmit=document.getElementById("mySubmit");
-const resultElement=document.getElementById("resultElement");
-let age;
+const subResult=document.getElementById("subResult");
+const paymentResult=document.getElementById("paymentResult");
 
 mySubmit.onclick=function(){
-    age=myText.value;
-    age=Number(age)
-    if(age>=100){
-        resultElement.textContent=`you are too old for this`;
-    }
-    else if(age<18){
-        resultElement.textContent=`go home child`;
+    if(myCheckbox.checked){
+        subResult.textContent="you are subcribed";
     }
     else{
-        resultElement.textContent=`lets go`;
+        subResult.textContent="you are not subcribed";
+    }
+    if(visaBtn.checked){
+        paymentResult.textContent="you are paying with visa";
+    }
+    else if(masterCardBtn.checked){
+        paymentResult.textContent="you are paying with mastercard";
+    }
+    else if(paypalBtn.checked){
+        paymentResult.textContent="you are paying with paypal";
+    }
+    else{
+        paymentResult.textContent="you must select one";
+
     }
 }
